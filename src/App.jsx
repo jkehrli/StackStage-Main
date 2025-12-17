@@ -1,11 +1,12 @@
 import './App.css'
-import Pages from "@/pages/index.jsx"
+import { RouterProvider } from 'react-router-dom'
+import { router } from '@/router'
 import { Toaster } from "@/components/ui/toaster"
 
 function App() {
   return (
     <>
-      <Pages />
+      <RouterProvider router={router} />
       <Toaster />
     </>
   )

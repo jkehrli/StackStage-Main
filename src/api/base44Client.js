@@ -1,8 +1,18 @@
-import { createClient } from '@base44/sdk';
-// import { getAccessToken } from '@base44/sdk/utils/auth-utils';
+// Mock Base44 client for demo purposes
+// This replaces the Base44 SDK with a simple mock implementation
 
-// Create a client with authentication required
-export const base44 = createClient({
-  appId: "686dcf0316f71e7677633984", 
-  requiresAuth: true // Ensure authentication is required for all operations
-});
+export const base44 = {
+  auth: null, // Will be set by entities.js
+  entities: {},
+  integrations: {
+    Core: {
+      InvokeLLM: null,
+      SendEmail: null,
+      UploadFile: null,
+      GenerateImage: null,
+      ExtractDataFromUploadedFile: null,
+      CreateFileSignedUrl: null,
+      UploadPrivateFile: null,
+    }
+  }
+};
